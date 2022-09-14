@@ -1,0 +1,27 @@
+/* maneiras de centralizar o css*/
+
+.centralizado 
+{
+    width: 100px;
+    margin: 0 auto;
+
+}
+
+/*usando o display grid*/
+.elemento-pai
+{
+    display: grid;
+    place-items: center;
+}
+/*usando o display flex*/
+.elemento-pai
+{
+    display: flex;
+    align-items: center ;
+    place-items: center;
+}
+
+/*pseudos classes do css*/
+:focus /* quando recebe foco um elemento*/
+::placeholder /*ajudar o usuaruio a como preencher um form*/
+:disabled /*representa um elemento desativado*/
