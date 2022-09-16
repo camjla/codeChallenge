@@ -1,11 +1,9 @@
-# NLW eSports
+# NLW eSports ;Desafio
 ![preview](./assets/preview/127.0.0.1_5500_index.html(iPad%20Air).png)
->>Trilha Explorer
 
 Desafio concluido  no evento Next Level Week da Rockeatseat
 
-[clique aqui para acessar](https://camjla.github.io/NLW-eSports-explorer/)
-## Tecnologias utilizadas
+# Tecnologias utilizadas
 
 -HTML
 
@@ -13,6 +11,7 @@ Desafio concluido  no evento Next Level Week da Rockeatseat
 
 -Git e Github
 
-## O que Implementei
+# O que Implementei  
 
-Mudei o fundo para um gradiente que constantemente muda de 
+Mudei o fundo para um gradiente que constantemente muda de cor e também minhas séries e filme favoritos.
+Acrescentei o logo do linkedin :)
