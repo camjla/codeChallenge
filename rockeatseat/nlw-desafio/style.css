@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+body {
+   background: linear-gradient( 90deg,
+  #000000 0%,
+  #ed5da0 50%,
+  #8d8e90 100%,
+  #5e98e0 0%);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+body * {
+  font-family: 'Inter', sans-serif;
+  line-height: 160%;
+}
+header {
+  padding-top: 32px;
+  height: calc(120px + 32px);
+}
+header div {
+  width: 120px;
+  margin: auto;
+  background-image: linear-gradient(
+    90deg,
+    #c91842 0%,
+    #5cc2e2 50%,
+    #262629 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  padding: 4px;
+  transition: transform 0.3s; /*serve para deixar mais leve essa transição da foto*/
+}
+header div:hover {
+  transform: scale(1.1); /*serve para fazer a foto "pulsar"*/
+}
+header div img {
+  /*está respeitando o width acima de 120px*/
+  width: 100%;
+  border-radius: 50%;
+}
+main {
+  max-width: 580px;
+  width: 90%; /*margem para deixar no meio*/
+  margin: auto;
+
+  display: grid;
+  gap: 24px;
+  margin-top: 32px;
+}
+section {
+  color: white;
+  background-image: linear-gradient(
+    90deg,
+    #c91842 0%,
+    #5cc2e2 50%,
+    #262629 100%
+  );
+  padding-top: 4px;
+  border-radius: 10px;
+}
+section div {
+  background-color: #2a2634;
+  padding: 32px;
+  padding-top: 24px;
+  border-radius: 8px;
+}
+section h2 {
+  letter-spacing: -0.47px;
+}
+section p {
+  letter-spacing: -0.18px;
+  color: #a1a1aa;
+}
+section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  margin-top: 24px;
+}
+section ul li {
+  transition: transform 0.3s;
+}
+section ul li:hover {
+  transform: scale(1.1);
+}
+.movie-list img,
+.series-list img {
+  width: 90px;
+  border-radius: 8px;
+  border: 1px solid #443e54;
+}
+
+/* animation */
+header div {
+  animation: fromTop 0.7s 0.2s backwards; /*serve para a imagem vir de cima para baixo. backwards é como se pegasse aquelas propriedades declaradsa embaixo*/
+}
+main section {
+  animation: fromBottom 0.7s backwards;
+}
+main section:nth-child(1) {
+  animation-delay: 0; /*para fazer aparecer com delayzin*/
+}
+main section:nth-child(2) {
+  animation-delay: 0.3s;
+}
+main section:nth-child(3) {
+  animation-delay: 0.5s;
+}
+@keyframes fromTop {
+  /*serve para inicio a animação*/
+  from {
+    opacity: 0;
+    transform: translateY(-30px); /*vai jogar o elemento p -30px pra cima*/
+  }
+
+  to {
+    /*para terminar na posição que quero ele fica em 0 pois é onde ja está*/
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
